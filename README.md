@@ -1,69 +1,62 @@
-# Project 1: Virtual Cybersecurity Lab on Apple Silicon
+# Project 2: DVWA Web Application Security Lab
 
-**Status:** Lab work completed; evidence and final documentation in progress  
-**Environment:** Apple M3 Mac, UTM virtualization, Kali Linux ARM64, Ubuntu Server  
-**Focus:** Linux fundamentals, virtualization, troubleshooting, and lab documentation
+**Status:** Lab configured; specific tests and findings must be recorded before this is marked complete  
+**Environment:** Controlled personal lab  
+**Application:** Damn Vulnerable Web Application (DVWA)
 
 ## Objective
 
-Build a personal, isolated environment for cybersecurity learning and controlled testing on Apple Silicon hardware.
+Use a deliberately vulnerable web application in a controlled environment to learn how web vulnerabilities can be identified, explained, and mitigated.
 
-## Environment & Components
+## Environment
 
-- Apple M3 Mac
+- Kali Linux virtual machine
 - UTM virtualization
-- Kali Linux ARM64 virtual machine
-- Ubuntu Server virtual machine
-- Apache web server
-- MariaDB
-- PHP
-- Damn Vulnerable Web Application (DVWA)
+- Apache, MariaDB, and PHP
+- DVWA
 
-The final architecture diagram should reflect the actual VM networking mode and configuration used. Do not assume that the VMs are on a bridged network or that a separate monitoring sensor is present unless verified.
+## Work Completed So Far
 
-## Work Completed
+- Configured the web application stack in the home lab.
+- Troubleshot configuration and application-access issues.
+- Reached a working DVWA environment.
 
-Based on the lab work performed:
+The list above describes environment setup. It does **not** claim that any particular vulnerability was successfully exploited or remediated.
 
-- Configured virtual machine resources and worked through ARM64 compatibility considerations.
-- Installed and accessed Linux virtual machines.
-- Used Linux command-line tools to troubleshoot services and system configuration.
-- Installed/configured components of a web application stack: Apache, MariaDB, and PHP.
-- Worked through web server and PHP configuration errors.
-- Troubleshot application directory and service-access issues.
-- Reached a functioning DVWA application in the lab.
+## Individual Test Report Template
 
-## Troubleshooting Notes to Expand
+Create one copy of this section for each test actually performed.
 
-Add exact commands and screenshots only after reviewing the original terminal history or reproducing the steps.
+### Test name
+*Example: SQL injection — use only if this exercise was actually completed.*
 
-| Issue | Investigation / resolution to document | Evidence needed |
-|---|---|---|
-| Linux VM installation/configuration | Record the actual setting or step that resolved it | VM settings screenshot |
-| Apache/PHP configuration error | Record the exact error and verified fix | Sanitized terminal output |
-| DVWA application access | Document the final service and URL checks used | Browser screenshot and service status |
-| VM networking | Record the actual network mode and IP configuration | Sanitized network details |
+- **Objective:**
+- **Authorized scope / target:**
+- **DVWA security level and relevant configuration:**
+- **Tools used:**
+- **Method summary:**
+- **Evidence observed:**
+- **Finding / root cause:**
+- **Potential impact:**
+- **Recommended mitigation:**
+- **Remediation performed:** Yes / No
+- **Validation performed:** Yes / No
+- **Limitations:**
+- **Lessons learned:**
 
-## Security Considerations
+## Reporting Guidance
 
-- Keep vulnerable applications confined to a controlled lab.
-- Do not expose DVWA to the public internet.
-- Use non-sensitive sample credentials.
-- Sanitize screenshots before publication.
-- Document the network mode and any isolation controls.
+A strong report explains why the observed behavior matters and how the issue could be mitigated. Avoid publishing a payload-only walkthrough with no analysis. Use screenshots that show relevant evidence while hiding secrets and unrelated personal information.
 
-## What I Learned
+## Safety
 
-This project reinforced that a cybersecurity lab is not just about installing tools. It requires understanding the operating system, dependencies, services, configuration, networking, and evidence-based troubleshooting.
+Perform testing only against the intentionally vulnerable application in your own controlled lab or another environment where you have explicit authorization. Do not test public or third-party systems without permission.
 
-## Next Steps
+## Completion Checklist
 
-- [ ] Add a verified architecture diagram.
-- [ ] Add sanitized screenshots of the working VMs and DVWA.
-- [ ] Record exact troubleshooting commands and outcomes.
-- [ ] Document the actual VM network configuration.
-- [ ] Link to the DVWA project report.
-
-## Evidence & References
-
-Add links to relevant official documentation and lab notes here. Do not include screenshots or claims that have not been verified.
+- [ ] Record the specific DVWA modules/tests completed.
+- [ ] Capture sanitized evidence.
+- [ ] Explain each finding and its impact.
+- [ ] Recommend an appropriate mitigation.
+- [ ] Test remediation and document the result, if performed.
+- [ ] Update this project status accurately.
