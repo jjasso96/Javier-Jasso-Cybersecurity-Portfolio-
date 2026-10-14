@@ -1,62 +1,109 @@
 # Project 2: DVWA Web Application Security Lab
 
-**Status:** Lab configured; specific tests and findings must be recorded before this is marked complete  
-**Environment:** Controlled personal lab  
-**Application:** Damn Vulnerable Web Application (DVWA)
+**Project type:** Hands-on web application security learning  
+**Status:** Application access verified; security testing and evidence collection pending  
+**Application:** Damn Vulnerable Web Application (DVWA)  
+**Environment:** Personal cybersecurity lab
 
-## Objective
+## Overview
 
-Use a deliberately vulnerable web application in a controlled environment to learn how web vulnerabilities can be identified, explained, and mitigated.
+This project uses Damn Vulnerable Web Application (DVWA), an intentionally vulnerable web application designed for security education and controlled testing.
 
-## Environment
+I configured the lab environment, accessed the DVWA interface, logged in, and explored its security settings. The next phase is to conduct structured tests against selected application features, document observations, and identify appropriate remediation measures.
 
-- Kali Linux virtual machine
-- UTM virtualization
-- Apache, MariaDB, and PHP
-- DVWA
+The goal is to develop practical skills in web application security, vulnerability validation, and evidence-based technical reporting.
 
-## Work Completed So Far
+## Objectives
 
-- Configured the web application stack in the home lab.
-- Troubleshot configuration and application-access issues.
-- Reached a working DVWA environment.
+- Become familiar with the DVWA interface and security configuration.
+- Understand common web application vulnerability classes.
+- Practice controlled security testing in an authorized environment.
+- Document test procedures, observations, and potential security implications.
+- Connect technical findings to remediation recommendations and vulnerability management practices.
 
-The list above describes environment setup. It does **not** claim that any particular vulnerability was successfully exploited or remediated.
+## Environment and Tools
 
-## Individual Test Report Template
+| Component | Purpose |
+|---|---|
+| DVWA | Intentionally vulnerable web application |
+| Kali Linux | Cybersecurity learning environment |
+| Web browser | Application access and interaction |
+| UTM | Virtualization platform used in the home lab |
 
-Create one copy of this section for each test actually performed.
+The exact VM networking mode and network isolation configuration have not yet been verified.
 
-### Test name
-*Example: SQL injection — use only if this exercise was actually completed.*
+## Work Completed
 
-- **Objective:**
-- **Authorized scope / target:**
-- **DVWA security level and relevant configuration:**
-- **Tools used:**
-- **Method summary:**
-- **Evidence observed:**
-- **Finding / root cause:**
-- **Potential impact:**
-- **Recommended mitigation:**
-- **Remediation performed:** Yes / No
-- **Validation performed:** Yes / No
-- **Limitations:**
-- **Lessons learned:**
+### Application Access
 
-## Reporting Guidance
+- Successfully accessed the DVWA web interface.
+- Logged into the application.
+- Navigated the application interface.
+- Accessed the security settings.
 
-A strong report explains why the observed behavior matters and how the issue could be mitigated. Avoid publishing a payload-only walkthrough with no analysis. Use screenshots that show relevant evidence while hiding secrets and unrelated personal information.
+### Current Testing Status
 
-## Safety
+No individual vulnerability tests, confirmed findings, or remediation results have been documented in this report yet.
 
-Perform testing only against the intentionally vulnerable application in your own controlled lab or another environment where you have explicit authorization. Do not test public or third-party systems without permission.
+Accessing DVWA establishes that the application is reachable; it does not establish that a vulnerability has been successfully tested or exploited.
 
-## Completion Checklist
+## Planned Security Assessment
 
-- [ ] Record the specific DVWA modules/tests completed.
-- [ ] Capture sanitized evidence.
-- [ ] Explain each finding and its impact.
-- [ ] Recommend an appropriate mitigation.
-- [ ] Test remediation and document the result, if performed.
-- [ ] Update this project status accurately.
+The following are proposed test areas, not completed tests or confirmed findings.
+
+| Test area | Assessment goal |
+|---|---|
+| SQL injection | Understand how unsafe database query handling can expose application data |
+| Cross-site scripting (XSS) | Examine how untrusted input may be interpreted as browser-executable content |
+| Command injection | Understand the risks of passing untrusted input to operating system commands |
+| File upload security | Examine file validation and upload handling controls |
+| Authentication and session management | Evaluate relevant authentication and session security behaviors |
+
+Testing will be conducted only against the authorized lab application.
+
+## Methodology
+
+For each test, the assessment record will include:
+
+1. **Objective:** What behavior or vulnerability is being evaluated.
+2. **Configuration:** The DVWA security level and relevant test conditions.
+3. **Procedure:** The steps performed to reproduce the test.
+4. **Observation:** The actual application response.
+5. **Analysis:** What the result does and does not demonstrate.
+6. **Remediation:** Recommended security controls, where applicable.
+7. **Evidence:** Sanitized screenshots or other reproducible supporting records.
+
+## Security Considerations
+
+- Keep DVWA within a controlled, authorized lab environment.
+- Verify network configuration before conducting additional tests.
+- Do not expose DVWA to the public internet.
+- Remove credentials, session cookies, and sensitive information from published evidence.
+- Do not report a vulnerability as confirmed without supporting test results.
+
+## Skills Developed
+
+- Web application navigation and configuration
+- Security testing methodology
+- Vulnerability validation
+- Technical documentation
+- Risk awareness and remediation analysis
+- Evidence-based reporting
+
+## Next Steps
+
+- [ ] Record the selected DVWA security level.
+- [ ] Capture sanitized screenshots of the application and settings.
+- [ ] Select an initial test case and document its objective.
+- [ ] Perform the test in the authorized lab.
+- [ ] Record the actual result and supporting evidence.
+- [ ] Explain the security implications and potential remediation.
+- [ ] Update the project status as testing progresses.
+
+## Evidence
+
+**Current evidence status:** No supporting screenshots or exported test results have been collected for this report.
+
+Evidence will be added as testing is performed and observations are verified.
+
+**Project outcome:** DVWA access and interface familiarization completed. Structured security testing, findings validation, and remediation documentation remain future work.
