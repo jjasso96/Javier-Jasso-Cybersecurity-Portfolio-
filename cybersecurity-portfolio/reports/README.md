@@ -2,59 +2,71 @@
 
 ## Purpose
 
-This directory organizes supporting documentation for cybersecurity projects, including vulnerability assessments, technical observations, remediation recommendations, and sanitized evidence.
+This directory organizes supporting documentation for cybersecurity projects, including assessment reports, technical observations, remediation recommendations, and sanitized evidence.
 
-The goal is to make assessment work traceable, reproducible, and understandable while distinguishing verified findings from planned activities and learning exercises.
+The goal is to make work traceable and understandable while distinguishing verified observations from planned activities, general learning, and unvalidated scanner output.
 
-## Reporting Standards
+## Minimum Reporting Standard
 
-Each report should document the following information where applicable:
+Where applicable, each report should document:
 
-- **Objective:** What the assessment was intended to evaluate.
-- **Scope:** Authorized targets and assessment boundaries.
-- **Environment:** Relevant tools, systems, and configurations.
-- **Methodology:** Steps performed and assessment procedures followed.
-- **Findings:** Observations supported by evidence.
-- **Risk assessment:** Severity, potential impact, and relevant context.
-- **Recommendations:** Appropriate corrective actions.
-- **Validation:** Evidence that a finding was resolved, if remediation was performed and verified.
-- **Limitations:** Missing evidence, testing constraints, and unresolved questions.
+- **Objective:** What the activity was intended to evaluate.
+- **Scope and authorization:** The permitted target and assessment boundaries.
+- **Environment:** Relevant systems, tools, and configurations that were actually used.
+- **Method:** The procedures performed.
+- **Observations and findings:** Results supported by evidence.
+- **Analysis:** What the evidence supports and what remains uncertain.
+- **Risk context:** Severity, exposure, impact, and business relevance when known.
+- **Recommendations:** Appropriate corrective actions, where justified.
+- **Validation:** Evidence that a corrective action worked, if remediation and verification were performed.
+- **Limitations:** Missing artifacts, constraints, and unanswered questions.
+
+Do not fill missing details with assumptions. Use “not recorded” or “not verified” when appropriate.
 
 ## Evidence Handling
 
-Evidence should support the statements made in each report.
+Useful evidence may include:
 
-Acceptable supporting materials may include:
-
-- Sanitized screenshots of tool configurations and results.
+- Sanitized screenshots of tool configuration and results.
 - Exported vulnerability assessment reports.
 - Relevant commands and output.
-- Vulnerability identifiers and supporting technical references.
-- Remediation notes and validation results.
+- Vulnerability identifiers and authoritative technical references.
+- Reproduction notes, remediation records, and validation results.
 
-Before publishing, remove credentials, tokens, personal information, sensitive network details, and other information that should not be public.
+Before publication, remove credentials, tokens, personal information, sensitive network details, private target information, and confidential employer data. Check screenshots for browser tabs, usernames, session cookies, and other accidental disclosures.
 
-## Current Reporting Status
+## Current Project Documentation
 
-The portfolio includes documentation for the following projects:
-
-| Project | Documentation focus |
+| Project | Current documented scope |
 |---|---|
-| Project 1: Home Cybersecurity Lab | Virtualization, Linux setup, troubleshooting, and lab configuration |
-| Project 2: DVWA Web Security | Web application access, security settings, and planned testing |
-| Project 3: Vulnerability Management | Vulnerability identification, prioritization, and remediation workflow |
-| Project 4: Nessus Assessment | Vulnerability scanning and review of assessment results |
+| [Project 1: Home Cybersecurity Lab](../projects/01-home-cybersecurity-lab/README.md) | UTM/Linux setup and troubleshooting; VM networking still unverified |
+| [Project 2: DVWA Web Security](../projects/02-dvwa-web-security/README.md) | Application access, login, and security-settings familiarization; testing not documented as completed |
+| [Project 3: Vulnerability Management](../projects/03-vulnerability-management/README.md) | Learning and workflow documentation; no specific findings claimed without evidence |
+| [Project 4: Nessus Assessment](../projects/04-nessus-assessment/README.md) | TryHackMe scan completed and results reviewed; original artifacts unavailable |
 
-The current case studies document learning activities and workflows. Specific findings, scan statistics, and remediation outcomes should only be published when supported by retained evidence.
+The reports describe only the work and results supported by available project history. Missing scan statistics, specific findings, and remediation outcomes must not be inferred.
 
-## Planned Improvements
+## Suggested Evidence Naming
 
-- Add sanitized screenshots and supporting assessment artifacts.
-- Document verified vulnerability findings and their technical context.
-- Record remediation recommendations and validation evidence.
-- Link each report to its corresponding project README.
-- Maintain clear distinctions between completed work, planned activities, and verified outcomes.
+Use descriptive, non-sensitive filenames, for example:
+
+- `project-01-utm-vm-settings-sanitized.png`
+- `project-02-dvwa-settings-sanitized.png`
+- `project-04-nessus-results-sanitized.png`
+
+These are naming examples only, not evidence that such files currently exist. Never include credentials or sensitive target information in filenames.
+
+## Before Publishing a Report
+
+- [ ] Confirm the activity was completed and authorized.
+- [ ] Separate direct observations from interpretation.
+- [ ] Check that all numbers, identifiers, and claims match the source evidence.
+- [ ] Label planned tests as planned rather than completed.
+- [ ] Do not claim a vulnerability is confirmed based only on an unvalidated scanner alert.
+- [ ] Do not claim remediation or risk reduction without validation.
+- [ ] Sanitize screenshots and exports.
+- [ ] Link the report to its corresponding project README.
 
 ## Professional Practice
 
-This portfolio uses an evidence-based reporting approach. Tool familiarity, scanner output, confirmed vulnerabilities, and validated remediation are distinct outcomes and should be documented accordingly.
+Tool familiarity, completed scans, scanner-reported findings, manually validated vulnerabilities, and verified remediation are different outcomes. Document each at the level supported by evidence.
