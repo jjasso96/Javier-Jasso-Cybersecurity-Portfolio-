@@ -2,103 +2,101 @@
 
 **Project type:** Hands-on web application security learning  
 **Application:** Damn Vulnerable Web Application (DVWA)  
-**Environment:** Personal cybersecurity lab using UTM  
-**Status:** Application access, login, and security-settings familiarization completed; structured testing and evidence collection remain pending
+**Environment:** Personal virtualized lab using Kali Linux and UTM  
+**Status:** DVWA access and a Hydra HTTP-form exercise documented; reported credential results require validation
 
 ## Overview
 
 Damn Vulnerable Web Application (DVWA) is an intentionally vulnerable application designed for security education and controlled testing.
 
-During this project, I accessed DVWA, logged in, navigated the interface, and opened its security settings. The next stage is to perform structured tests in the authorized lab and document the actual observations.
+Screenshots show the DVWA Brute Force module open in a browser and THC Hydra being used against the lab form with a short list of candidate passwords. Hydra reported six “valid passwords found,” but the visible DVWA page displayed an incorrect-credentials message and warned that the account might be temporarily locked after repeated failed attempts.
 
-Accessing the application does not by itself confirm a vulnerability or demonstrate successful exploitation.
+Because those results conflict, the tool output is **not treated as proof of valid credentials or a successful login**. The exact target address, account name, candidate passwords, and other host-identifying details are intentionally omitted from this public report.
 
 ## Objectives
 
-- Become familiar with the DVWA interface and security settings.
-- Learn a repeatable approach to controlled web application testing.
-- Record procedures and observed application behavior.
-- Explain security implications only when supported by test evidence.
-- Connect verified observations to appropriate remediation guidance.
+- Practice controlled authentication testing in an intentionally vulnerable application.
+- Learn how automated tool output depends on correctly configured success/failure conditions.
+- Compare command-line results with the application’s actual response.
+- Document uncertainty rather than presenting unvalidated output as a confirmed finding.
+- Identify defensive controls relevant to repeated authentication attempts.
 
 ## Environment and Tools
 
 | Component | Role |
 |---|---|
 | DVWA | Intentionally vulnerable web application |
-| Kali Linux | Cybersecurity learning environment |
-| Web browser | Application access and interaction |
-| UTM | Virtualization platform used in the home lab |
+| Kali Linux | Security testing environment |
+| THC Hydra | HTTP form authentication testing tool |
+| Web browser | Independent view of the application response |
+| UTM | Virtualization platform used for the lab |
 
-The VM networking mode and isolation configuration have not been verified from retained settings.
+The screenshots indicate that the DVWA Brute Force module was open in the browser and that Hydra used an HTTP GET-form workflow. The exact request parameters, target URL, application configuration, and tool invocation are not reproduced because they include unnecessary target-specific details and the original lab notes are not available.
 
-## Work Completed
+## Work Completed and Observations
 
-- Accessed the DVWA web interface.
-- Logged into the application.
-- Navigated the interface.
-- Accessed the application's security settings.
+- Opened the DVWA Brute Force module.
+- Ran a short Hydra HTTP-form test against the lab application.
+- Observed Hydra report six candidate passwords as valid.
+- Compared the tool output with the browser, where DVWA displayed an incorrect-credentials message and a possible account-lockout warning.
 
-The exact security level selected and supporting screenshots are not currently retained in this report.
+No candidate passwords are reproduced in this report.
 
-## Testing Status
+## Analysis and Limitations
 
-No individual vulnerability tests, confirmed findings, or remediation results are documented here as completed.
+The conflicting outputs are the most important learning point in this exercise. Automated form-testing tools typically decide whether an attempt succeeded by matching a configured response condition. If the condition is too broad or does not distinguish the successful-login response from a failed-login or lockout response, the tool can report false positives.
 
-The following are **proposed test areas**, not a record of completed tests:
+The screenshots alone do not establish which response condition Hydra used, whether any candidate credential was actually accepted, or whether a successful authenticated session was reached. Accordingly:
 
-| Test area | Learning objective |
-|---|---|
-| SQL injection | Understand how unsafe query construction can expose or alter data |
-| Cross-site scripting (XSS) | Examine how untrusted input may be interpreted by a browser |
-| Command injection | Understand risks from passing untrusted input to operating system commands |
-| File upload security | Examine file validation and upload controls |
-| Authentication and session management | Explore relevant authentication and session behaviors |
+- The six tool-reported results are treated as **unverified candidates**, not confirmed passwords.
+- No successful authentication is claimed.
+- No confirmed vulnerability severity or exploitability rating is assigned.
+- The visible lockout message is documented as an application response, not proof of a specific lockout implementation or duration.
+- No remediation or retest is claimed as completed.
 
-Any tests should remain within the authorized lab scope.
+## Recommended Validation Workflow
 
-## Methodology for Future Tests
+For a future authorized lab run:
 
-For each test, record:
+1. Confirm the target is the local/authorized DVWA instance and record the relevant module and security level.
+2. Use a small, controlled test list and avoid unnecessary repeated attempts.
+3. Establish the expected failure response and successful-login response manually before configuring automated detection.
+4. Configure the tool’s failure condition to distinguish a failed attempt from a genuinely successful authentication.
+5. Validate any reported success by checking the application state in the browser or another reliable independent indicator.
+6. Stop if an account-lockout or rate-limit response appears, and document it without assuming the cause.
+7. Save sanitized evidence of the request configuration and both failure/success response behavior, if a success can be reproduced.
+8. Report only results supported by the validation evidence.
 
-1. **Objective:** The behavior being evaluated.
-2. **Conditions:** The DVWA security level and relevant configuration, once verified.
-3. **Procedure:** The steps actually performed.
-4. **Observation:** The application response, captured accurately.
-5. **Analysis:** What the observation does and does not demonstrate.
-6. **Remediation:** Relevant defensive controls, where applicable.
-7. **Evidence:** Sanitized screenshots or reproducible supporting records.
+This workflow is guidance for future testing; it does not imply these validation steps were completed during the captured exercise.
 
-## Security Considerations
+## Security Considerations and Defensive Context
 
-- Keep DVWA within a controlled, authorized lab.
-- Verify networking and isolation before conducting additional tests.
-- Do not expose DVWA to the public internet.
-- Remove credentials, session cookies, and sensitive details from published evidence.
-- Do not report a vulnerability as confirmed without supporting results.
+Authentication defenses commonly include rate limiting, progressive delays, multi-factor authentication where appropriate, monitoring for repeated failures, and carefully designed account-lockout controls. Lockout policies should also be evaluated for denial-of-service and account-enumeration side effects.
+
+Testing must remain within an authorized lab. Do not use password lists against third-party systems or accounts. Do not publish candidate passwords, session cookies, credentials, private target details, or unredacted screenshots.
 
 ## Skills Practiced
 
-- Web application navigation
-- Application security-settings familiarization
-- Controlled testing methodology planning
-- Evidence-based technical documentation
-- Risk awareness and remediation analysis
+- DVWA navigation and authentication-module familiarization
+- Hydra HTTP-form testing in a controlled lab
+- Comparing automated tool output with browser-observed behavior
+- Recognizing false-positive risks in automated testing
+- Evidence validation and cautious technical reporting
+- Understanding defensive controls for repeated authentication attempts
 
 ## Next Steps
 
-- [ ] Record the selected DVWA security level after verifying it.
-- [ ] Capture sanitized screenshots of the application and settings.
-- [ ] Select one initial test case and document its objective.
-- [ ] Perform the test within the authorized lab.
-- [ ] Record the actual result and supporting evidence.
-- [ ] Explain the security implications and relevant remediation.
-- [ ] Update the project status to reflect completed work.
+- [ ] Recreate the exercise only within the authorized lab.
+- [ ] Verify the configured success/failure match condition using known, controlled test cases.
+- [ ] Confirm any reported success independently before documenting it as a finding.
+- [ ] Record the application’s actual security level and relevant configuration.
+- [ ] Capture sanitized evidence without target addresses, account names, candidate passwords, cookies, or tokens.
+- [ ] Document defensive recommendations and perform a retest only if changes are actually made.
 
 ## Evidence
 
-**Current evidence status:** No supporting screenshots or exported test results are currently retained for this report.
+**Evidence reviewed:** User-provided screenshots of the DVWA Brute Force page and Hydra output.
 
-Future evidence should be added only after the test is performed and observations are verified.
+**Publication status:** Raw screenshots are not included in the public repository because they contain target and account-related details. Candidate passwords and host identifiers have been excluded.
 
-**Current outcome:** DVWA access and interface familiarization completed. Structured security testing, finding validation, and remediation documentation remain outstanding.
+**Current outcome:** The automated tool reported candidate successes, but the browser displayed an authentication failure/lockout message. The result remains inconclusive until the detection condition and application state are independently validated.
