@@ -1,4 +1,4 @@
-# Javier Jasso | Cybersecurity Portfolio
+# Javier Jasso 
 
 > **Cybersecurity • Vulnerability Management • Security Operations**
 
