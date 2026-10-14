@@ -10,21 +10,21 @@ My professional background includes incident investigation, risk assessment, cor
 
 ### 1. Virtual Cybersecurity Lab on Apple Silicon
 
-**Status:** Core setup and troubleshooting completed; network configuration and evidence collection remain pending.
+**Status:** Linux VM connectivity, SSH access, Nmap service discovery, and a UFW rule update documented; firewall enforcement and network isolation remain unverified.
 
-Configured and accessed Linux virtual machines on an Apple M3 Mac using UTM, and worked through web-application stack setup issues to reach the DVWA interface.
+Configured Linux virtual machines in UTM on an Apple M3 Mac. Screenshots show successful lab reachability and SSH access, plus an Nmap result reporting SSH open on the lab Ubuntu system. A UFW rule update was also shown, but effective blocking was not validated.
 
 - [Read the lab case study](projects/01-home-cybersecurity-lab/README.md)
-- Focus: virtualization, Linux troubleshooting, web-service setup, documentation
+- Focus: virtualization, Linux troubleshooting, network diagnostics, SSH, firewall fundamentals, documentation
 
 ### 2. DVWA Web Application Security Lab
 
-**Status:** DVWA access, login, and security-settings familiarization completed; structured testing not yet documented.
+**Status:** A Hydra HTTP-form exercise was captured; reported candidate successes remain unverified.
 
-Accessed the intentionally vulnerable DVWA application in the lab and explored its interface and security settings. Access alone is not evidence that a vulnerability was tested or confirmed.
+Used Hydra against the DVWA Brute Force module in the controlled lab. The tool reported candidate successes, while the browser displayed an incorrect-login/possible-lockout message. The case study documents this discrepancy without claiming confirmed credentials or successful authentication.
 
 - [Read the DVWA case study](projects/02-dvwa-web-security/README.md)
-- Focus: controlled web application testing methodology and evidence collection
+- Focus: controlled web application testing, authentication testing, tool-output validation, evidence handling
 
 ### 3. Vulnerability Management and Assessment
 
@@ -47,9 +47,9 @@ The report documents only the confirmed workflow. It does not invent a target, f
 
 The following reflect a mix of professional experience, training, and independent lab practice. They do not all represent production administration experience.
 
-- **Network analysis:** TCP/IP, Wireshark, packet inspection
-- **Security tools and concepts:** Nessus, Snort, YARA, MISP, Metasploit, SIEM fundamentals
-- **Systems and lab work:** Windows, Linux, Kali Linux, Ubuntu Server, UTM
+- **Network analysis:** TCP/IP, Wireshark, packet inspection, ping, Nmap
+- **Security tools and concepts:** Nessus, Snort, YARA, MISP, Metasploit, Hydra, SIEM fundamentals
+- **Systems and lab work:** Windows, Linux, Kali Linux, Ubuntu Server, UTM, SSH, UFW
 - **Web application lab:** DVWA and the Apache/MariaDB/PHP stack used during setup
 - **Frameworks and concepts:** MITRE ATT&CK, NIST concepts, RMF, CIA triad
 - **Risk and documentation:** investigations, risk assessment, corrective-action tracking, compliance documentation
@@ -91,7 +91,7 @@ Each case study aims to distinguish:
 - [Security assessment reporting standards](reports/README.md)
 - [Technical documentation index](reports/technical-documentation.md)
 
-Evidence should be sanitized before publication. Do not publish credentials, tokens, private keys, personal information, sensitive target details, or confidential employer information.
+Evidence is summarized only after reviewing the available material. Public documentation omits credentials, password candidates, private keys, tokens, unnecessary host addresses, MAC addresses, SSH fingerprints, personal information, and confidential employer information. Raw screenshots containing sensitive lab details are not published.
 
 ## Contact
 
