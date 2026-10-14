@@ -1,24 +1,24 @@
 # Project 1: Virtual Cybersecurity Lab on Apple Silicon
 
-**Project type:** Home lab / Linux administration / Web application security  
-**Status:** Lab configured; additional evidence and validation pending  
+**Project type:** Personal cybersecurity home lab  
+**Status:** Core lab setup completed; evidence collection and network configuration verification pending  
 **Environment:** Apple M3 Mac, UTM, Kali Linux ARM64, Ubuntu Server
 
 ## Overview
 
-I built a personal virtualized environment to develop practical cybersecurity skills, troubleshoot Linux systems, and explore web application security in a controlled lab.
+I built a personal virtualized environment to develop practical cybersecurity skills, gain experience with Linux administration, and troubleshoot a web application security lab.
 
-The project involved configuring virtual machines on Apple Silicon, working with web application dependencies, and deploying Damn Vulnerable Web Application (DVWA) for security learning.
+The project involved configuring virtual machines on Apple Silicon, working through Linux and web application setup issues, and accessing Damn Vulnerable Web Application (DVWA) in a controlled learning environment.
 
-A key part of this project was troubleshooting configuration and application-access issues until I could access the DVWA interface and use its security-level settings.
+This project emphasizes hands-on troubleshooting, technical documentation, and establishing a foundation for future vulnerability assessment and security testing.
 
 ## Objectives
 
-- Build a practical cybersecurity learning environment on Apple Silicon.
-- Gain hands-on experience with Linux virtual machines and system services.
-- Configure the components required to run DVWA.
-- Develop troubleshooting skills through installation and application-access issues.
-- Establish a foundation for future web vulnerability testing and security analysis.
+- Configure and use Linux virtual machines on Apple Silicon.
+- Develop familiarity with Linux command-line administration and troubleshooting.
+- Work through web server and application dependency configuration.
+- Access DVWA and explore its application interface and security settings.
+- Establish a documented foundation for future, controlled web application security testing.
 
 ## Environment and Technologies
 
@@ -27,82 +27,78 @@ A key part of this project was troubleshooting configuration and application-acc
 | Apple M3 Mac | Host computer |
 | UTM | Virtual machine management |
 | Kali Linux ARM64 | Cybersecurity learning environment |
-| Ubuntu Server | Linux server administration |
-| Apache | Web server |
-| MariaDB | Database service |
-| PHP | Server-side application runtime |
-| DVWA | Deliberately vulnerable web application for authorized security practice |
+| Ubuntu Server | Linux server environment |
+| Apache, MariaDB, PHP | Web application stack components used during setup |
+| DVWA | Intentionally vulnerable web application for security training |
 
-**Networking note:** The original VM networking mode and isolation configuration have not yet been verified. They will be documented after reviewing the UTM settings.
+**Network configuration note:** The virtual machines' networking mode and isolation controls have not yet been verified. Network architecture and isolation will be documented after reviewing the actual UTM settings.
 
 ## Implementation and Work Completed
 
 ### 1. Virtualization and Linux
 
-- Configured virtual machines in UTM on an Apple Silicon Mac.
-- Installed and accessed Kali Linux ARM64 and Ubuntu Server.
+- Configured virtual machine resources in UTM on Apple Silicon.
+- Installed and accessed Linux virtual machine environments.
 - Worked through installation and configuration issues during setup.
 - Gained practical experience navigating Linux environments and troubleshooting system behavior.
 
-### 2. Web Application Stack
+### 2. Web Application Environment
 
-- Worked with Apache, MariaDB, and PHP while configuring DVWA.
-- Investigated web server, PHP, and application configuration issues.
-- Troubleshot application directory and service-access problems.
-- Verified that the DVWA web interface was accessible.
+- Worked through Apache, MariaDB, and PHP configuration during the DVWA setup.
+- Troubleshot web server and application configuration issues.
+- Resolved setup obstacles sufficiently to access the DVWA web interface.
 
 ### 3. DVWA Interface
 
-- Accessed the DVWA interface after troubleshooting the setup.
-- Used the application's security-level settings.
-- Established a starting point for controlled web application security exercises.
+- Successfully accessed DVWA and logged in.
+- Navigated the application interface and its security settings.
+- Established a starting point for future controlled security testing.
 
-Individual vulnerability tests, findings, and remediation outcomes are not included here because they have not yet been documented and verified.
+**Testing status:** Specific vulnerability tests, exploitation results, findings, and remediation outcomes have not yet been documented as verified results. No vulnerability findings are claimed in this case study.
 
 ## Troubleshooting and Lessons Learned
 
-This project required more than installing software. I had to investigate configuration issues across the virtual machine, Linux services, application dependencies, and web application itself.
+The setup process required working through virtualization, Linux, web server, and application configuration issues.
 
-The experience reinforced several practical troubleshooting principles:
+Key lessons from the project include:
 
-- Verify service status and configuration instead of assuming a service is working.
-- Separate operating system, web server, PHP, database, and application-level problems.
-- Validate changes by checking the resulting application behavior.
-- Record commands, configuration changes, and successful outcomes so issues can be reproduced.
-- Verify network exposure and isolation before conducting security testing.
-
-**Documentation improvement:** Exact commands, error messages, and resolution steps will be added after reviewing available terminal history or reproducing the relevant steps.
+- Troubleshooting requires identifying the failing component rather than assuming the entire environment is broken.
+- Web applications depend on multiple services and configuration layers working together.
+- Verifying application accessibility is an important setup milestone, but it does not establish that security testing has been completed.
+- Technical documentation should distinguish observed behavior from assumptions and unverified configurations.
+- Running virtual machines on Apple Silicon can introduce architecture and compatibility considerations that must be accounted for during setup.
 
 ## Security Considerations
 
-- Use DVWA only in an environment you own or are explicitly authorized to test.
-- Verify VM networking and isolation before conducting vulnerability testing.
-- Do not expose DVWA to the public internet.
-- Use non-sensitive lab credentials and avoid publishing passwords, tokens, or private network details.
-- Keep screenshots and configuration examples sanitized before publishing them.
-- Document the scope of each security test and distinguish observations from confirmed findings.
+- Use DVWA only in an authorized, controlled lab environment.
+- Verify VM networking and isolation before conducting further security testing.
+- Do not expose the intentionally vulnerable application to the public internet.
+- Avoid including passwords, tokens, private IP details, or other sensitive information in published screenshots.
+- Record test procedures and results before making security claims.
 
-## Cybersecurity Skills Demonstrated
+## Skills Practiced
 
-- Linux installation and basic system administration
-- Virtualization and environment configuration
-- Web server and application dependency troubleshooting
-- Basic web application deployment
-- Evidence-based technical documentation
-- Security lab setup and safe testing awareness
+- Virtualization with UTM
+- Linux environment setup and troubleshooting
+- Web server and application stack configuration
+- Web application navigation and security settings
+- Technical documentation and evidence-based reporting
+- Security lab planning and risk awareness
 
 ## Next Steps
 
-- [ ] Verify UTM network mode and document the actual configuration.
-- [ ] Capture sanitized screenshots of the virtual machines and working DVWA interface.
-- [ ] Record relevant troubleshooting commands and verified resolutions.
-- [ ] Document individual DVWA security exercises, including test objective, observed behavior, and security implications.
-- [ ] Add remediation guidance and retest results where applicable.
-- [ ] Create an architecture diagram based on the verified configuration.
+- [ ] Verify and document UTM networking mode for each VM.
+- [ ] Confirm network isolation and document the actual lab topology.
+- [ ] Capture sanitized screenshots of the VM configuration and working DVWA interface.
+- [ ] Record the specific DVWA security level selected during testing.
+- [ ] Conduct authorized, controlled tests against selected DVWA modules.
+- [ ] Document test procedures, observations, expected behavior, and remediation guidance.
+- [ ] Update this report only when results and supporting evidence are available.
 
-## Project Outcome
+## Evidence and References
 
-I successfully configured a personal virtual cybersecurity lab and accessed DVWA, including its security-level settings. The project provided practical experience with Linux environments, web application dependencies, and troubleshooting.
+**Current evidence status:** No supporting screenshots or exported test results have been collected for this report.
 
-The next phase is to strengthen the documentation with reproducible evidence and verified security testing results.
+Future evidence should include sanitized VM configuration screenshots, proof of DVWA access, relevant test observations, and a network diagram based on verified configuration.
 
+**Project outcome:** A working starting point for hands-on cybersecurity learning, with further validation, security testing, and evidence collection remaining.
