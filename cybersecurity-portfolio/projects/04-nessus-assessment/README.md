@@ -1,69 +1,129 @@
-# Project 4: Tenable Nessus Vulnerability Assessment
+# Project 4: Nessus Vulnerability Assessment
 
-**Status:** In progress / assessment evidence to be added  
-**Goal:** Complete and document an end-to-end vulnerability assessment of an authorized lab target.
+**Project Type:** Vulnerability Management / Security Assessment  
+**Platform:** TryHackMe  
+**Tool:** Tenable Nessus  
+**Status:** Scan completed and results reviewed; supporting evidence and detailed findings not retained
 
-## Objective
+## Overview
 
-Demonstrate the vulnerability management workflow using Tenable Nessus: define scope, run a scan, interpret findings, prioritize remediation, and validate the results.
+This project documents hands-on experience using Nessus in an authorized TryHackMe training environment to perform a vulnerability scan and review the resulting assessment data.
 
-## Planned Lab
+The exercise provided practical exposure to vulnerability scanning workflows and the role of automated scanning in identifying potential security weaknesses. It also reinforced the importance of reviewing scanner output before drawing conclusions about risk or recommending remediation.
 
-Previous planning considered using a dedicated Ubuntu Server ARM64 VM and scanning an authorized lab target such as the Kali/DVWA environment. Confirm the final setup before documenting it as implemented.
+This case study focuses on the assessment workflow and skills practiced. Specific scan targets, vulnerability counts, severity distributions, and remediation outcomes are not reported because supporting records are not currently available.
 
-**Do not expose DVWA or another deliberately vulnerable service to the public internet.** Confirm the VM network configuration and restrict access to the lab.
+## Objectives
 
-## Workflow
+- Gain practical experience with vulnerability scanning using Nessus.
+- Understand the purpose of automated vulnerability discovery.
+- Review scanner output and understand how findings support risk assessment.
+- Connect vulnerability identification with prioritization and remediation.
+- Document assessment procedures, limitations, and evidence requirements.
+- Understand the importance of validating findings before reporting security risks.
 
-### 1. Scope and preparation
-- Record the target and why it is authorized.
-- Record VM operating systems, network mode, and relevant IP information in a sanitized form.
-- Confirm Nessus edition/version and target reachability.
-- Document any credentials or scan settings without publishing secrets.
+## Environment and Tools
 
-### 2. Scan
-- Create a suitable scan for the lab target.
-- Record the scan policy and relevant settings.
-- Run the scan and preserve sanitized evidence.
-- Note scan limitations, unreachable services, or incomplete checks.
+| Component | Purpose |
+|---|---|
+| TryHackMe | Authorized cybersecurity training environment |
+| Tenable Nessus | Vulnerability scanning and assessment |
+| Vulnerability scan results | Review of scanner-generated assessment data |
+| CVE and CVSS concepts | Understanding vulnerability identification and severity scoring |
 
-### 3. Analyze
-For selected findings, record:
-- Finding/plugin name and ID
-- Affected host/service
-- CVE, if applicable and verified
-- CVSS information and its source
-- Scanner evidence and affected version/configuration
-- Business/technical impact in the lab context
-- Confidence and limitations
+*Note: This table identifies the platform, tool, and concepts associated with the project. The exact target, scan profile, scanner version, and configuration have not been retained.*
 
-### 4. Prioritize and remediate
-- Select a finding based on evidence and context.
-- Research an appropriate fix using a trustworthy vendor or project source.
-- Apply the fix only to the lab target.
-- Record the change and any potential service impact.
+## Assessment Workflow
 
-### 5. Validate
-- Re-scan using a comparable configuration.
-- Compare the original and follow-up evidence.
-- State whether the finding was resolved, remains present, or could not be validated.
-- Explain any residual risk or limitations.
+### 1. Vulnerability Scanning
 
-## Results Table
+Completed a vulnerability scan as part of a TryHackMe training exercise.
 
-| Finding | Evidence | Risk rationale | Recommended fix | Status after validation |
-|---|---|---|---|---|
-| To be populated from scan | Pending | Pending | Pending | Pending |
+The purpose of the scan was to practice using a vulnerability assessment tool to examine a training target for potential security weaknesses.
 
-## Deliverables
+The target address, scan policy, configuration parameters, and scan duration are not currently documented.
 
-- [ ] Lab architecture diagram
-- [ ] Sanitized scan configuration/results screenshots
-- [ ] Findings table with evidence
-- [ ] Prioritized remediation plan
-- [ ] Before/after comparison
-- [ ] Final report with limitations and lessons learned
+### 2. Results Review
 
-## Reporting Integrity
+Reviewed the results generated by the completed scan.
 
-Do not claim a scan was run, a vulnerability was found, or a remediation succeeded until you have the corresponding evidence. Keep any example data clearly labeled as synthetic.
+This stage focused on understanding how vulnerability scanners present assessment information and how those results can support further investigation and risk-based decision-making.
+
+Individual findings, plugin identifiers, CVE references, severity ratings, and affected services are not included because the original results are unavailable.
+
+### 3. Vulnerability Management Context
+
+A vulnerability scan is one step in a broader vulnerability management process:
+
+1. **Asset discovery:** Identify authorized assessment targets.
+2. **Scanning:** Collect information about potential vulnerabilities.
+3. **Analysis:** Review findings, affected assets, and supporting evidence.
+4. **Prioritization:** Consider severity, exploitability, exposure, and business impact.
+5. **Remediation:** Recommend and implement appropriate corrective actions.
+6. **Validation:** Rescan or otherwise verify whether corrective actions resolved the issue.
+7. **Reporting:** Document results, outstanding risks, and recommended next steps.
+
+These lifecycle stages provide context for the project; completion of the scan does not establish that every stage was performed.
+
+## Work Completed
+
+The following activities are supported by the available project history:
+
+- Completed a Nessus vulnerability scan in a TryHackMe training environment.
+- Reviewed the resulting scan data.
+- Practiced the vulnerability assessment workflow.
+- Gained practical exposure to the role of vulnerability scanning in security operations and vulnerability management.
+
+Detailed findings and technical configuration records remain undocumented.
+
+## Assessment Results and Limitations
+
+**Verified outcome:** The scan was completed and its results were reviewed.
+
+**Evidence limitation:** No scan export, screenshots, detailed notes, or retained target information are currently available.
+
+Consequently, this report does not claim:
+
+- A specific number of vulnerabilities or findings.
+- Any critical, high, medium, or low severity counts.
+- Particular CVEs, affected ports, services, or operating systems.
+- Confirmed exploitability or successful exploitation.
+- Completed remediation or verified risk reduction.
+
+These details should be added only after the original assessment records have been recovered or a new authorized scan has been completed and documented.
+
+## Security Considerations
+
+- Perform scans only against systems explicitly authorized for testing.
+- Follow the training platform's rules and the target's permitted scope.
+- Use appropriate scan settings for the authorized environment.
+- Treat scanner output as assessment evidence that may require validation.
+- Avoid publishing sensitive target information, credentials, or unredacted reports.
+- Do not claim remediation success without supporting validation evidence.
+
+## Skills Practiced
+
+- Nessus vulnerability scanning fundamentals.
+- Review of automated assessment results.
+- Vulnerability management workflow awareness.
+- Risk-based vulnerability assessment concepts.
+- Technical documentation and evidence-based reporting.
+- Security assessment scope and authorization awareness.
+
+## Next Steps
+
+- Recover the original scan results or relevant training notes, if available.
+- Record the authorized target type and scan configuration.
+- Document representative findings with plugin identifiers, severity, and supporting evidence.
+- Explain the risk and recommended remediation for each verified finding.
+- Distinguish scanner-reported findings from manually validated vulnerabilities.
+- Perform a follow-up scan if remediation is completed and validation is appropriate.
+- Add sanitized screenshots or exported evidence after reviewing them for sensitive information.
+
+## Evidence and References
+
+**Current evidence status:** No supporting scan artifacts are currently available.
+
+Future documentation may include sanitized Nessus screenshots, exported scan results, relevant plugin details, assessment notes, and validation evidence.
+
+Only verified information will be added to this report. No specific vulnerability findings or remediation outcomes are asserted in the current version.
