@@ -2,42 +2,48 @@
 
 **Cybersecurity | Vulnerability Management | Security Operations**
 
-Welcome to my cybersecurity portfolio. Here I document my hands-on labs, technical projects, and continued development in cybersecurity.
+Welcome to my cybersecurity portfolio. It documents hands-on labs, technical learning, and my continued development toward cybersecurity roles.
 
-My background combines operational risk management, incident investigation, compliance, and technical troubleshooting. I'm applying that experience to vulnerability management and security operations through practical labs, vulnerability research, and technical documentation.
+My background combines operational risk management, incident investigation, compliance, corrective-action tracking, and technical troubleshooting. I apply that experience to cybersecurity through structured lab work, vulnerability management concepts, and evidence-conscious documentation.
 
 ## Featured Projects
 
-- **[Home Cybersecurity Lab](cybersecurity-portfolio/projects/01-home-cybersecurity-lab/README.md)** — Building and troubleshooting Linux virtual machines on an Apple M3 Mac using UTM.
-- **[DVWA Web Application Security Lab](cybersecurity-portfolio/projects/02-dvwa-web-security/README.md)** — Configuring a deliberately vulnerable web application in a controlled lab.
-- **[Vulnerability Management](cybersecurity-portfolio/projects/03-vulnerability-management/README.md)** — Learning vulnerability research, risk-based prioritization, and remediation.
-- **[Tenable Nessus Assessment](cybersecurity-portfolio/projects/04-nessus-assessment/README.md)** — Developing a practical vulnerability assessment workflow.
+- **[Home Cybersecurity Lab](cybersecurity-portfolio/projects/01-home-cybersecurity-lab/README.md)** — Linux virtual machines and web-application lab setup on an Apple M3 Mac using UTM.
+- **[DVWA Web Application Security Lab](cybersecurity-portfolio/projects/02-dvwa-web-security/README.md)** — DVWA access, login, and security-settings familiarization; structured testing remains future work.
+- **[Vulnerability Management](cybersecurity-portfolio/projects/03-vulnerability-management/README.md)** — Vulnerability databases, scanning concepts, prioritization, and remediation workflow learning.
+- **[Tenable Nessus Assessment](cybersecurity-portfolio/projects/04-nessus-assessment/README.md)** — A TryHackMe training-lab scan was completed and its results reviewed; detailed findings and artifacts are not currently available.
 
-## Technical Skills
+## Skills and Learning Areas
 
-- **Network analysis:** Wireshark, TCP/IP, packet inspection
-- **Security tools:** Snort, YARA, MISP, Metasploit, SIEM fundamentals
-- **Systems:** Linux, Kali Linux, Ubuntu Server, Windows
-- **Security concepts:** Vulnerability assessment, incident investigation, risk analysis
-- **Frameworks:** MITRE ATT&CK, NIST, Risk Management Framework (RMF)
+- **Network fundamentals:** TCP/IP, packet inspection, Wireshark (training and lab exposure)
+- **Security tools and concepts:** Nessus, Snort, YARA, MISP, Metasploit, SIEM fundamentals
+- **Systems and lab work:** Linux, Kali Linux, Ubuntu Server, UTM virtualization
+- **Security practices:** Vulnerability assessment concepts, incident investigation, risk analysis, evidence-based reporting
+- **Frameworks:** MITRE ATT&CK, NIST concepts, Risk Management Framework (RMF)
 
-## Certifications & Training
+Skills reflect a combination of professional experience, training, and independent lab practice; they should not be interpreted as equivalent to production ownership of every listed tool.
 
-- CompTIA Security+ — earned February 2024; current status to be confirmed
-- CompTIA Network+ — earned November 2024; current status to be confirmed
+## Certifications and Training
+
+- CompTIA Security+ — previously reported as earned February 2024; verify current status before publishing a renewal claim.
+- CompTIA Network+ — previously reported as earned November 2024; verify current status before publishing a renewal claim.
 - Correlation One Cybersecurity Fellowship
-- TryHackMe SOC Analyst Training
+- TryHackMe cybersecurity training
 - Security Blue Team — Introduction to Network Analysis
 
-See the [full training and certifications list](cybersecurity-portfolio/training/certifications-and-training.md).
+See the [training and certifications index](cybersecurity-portfolio/training/certifications-and-training.md) for additional details.
 
 ## Professional Background
 
-My experience includes workplace health and safety, risk assessments, incident investigations, compliance audits, and corrective-action tracking. These skills provide a strong foundation for evidence-based security analysis and risk management.
+My professional experience includes workplace health and safety, risk assessments, incident investigations, compliance audits, operational trend analysis, and corrective-action tracking. These are transferable risk-management and investigation skills, not cybersecurity job duties.
+
+## Reporting Standard
+
+Project pages distinguish completed activities from planned tests, observed evidence, and validated outcomes. No specific vulnerability findings, severity counts, or remediation outcomes should be reported without supporting records.
 
 ## Contact
 
-- **LinkedIn:** Add your LinkedIn profile URL
-- **GitHub:** Add your GitHub profile URL
+- **LinkedIn:** Add your public LinkedIn profile URL.
+- **GitHub:** [jjasso96](https://github.com/jjasso96)
 
-*This portfolio is a work in progress. Project status and findings will be updated as hands-on work and validation are completed.*
+*This portfolio is actively being developed. Project details will be expanded as verified evidence and additional work become available.*
